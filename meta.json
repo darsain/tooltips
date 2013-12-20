@@ -1,0 +1,12 @@
+{
+	"name": "tooltips",
+	"description": "Tooltips for DOM elements.",
+	"version": "0.1.0",
+	"date": "",
+	"licenses": [
+		{
+			"type": "MIT",
+			"url": "http://opensource.org/licenses/MIT"
+		}
+	]
+}

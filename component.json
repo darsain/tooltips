@@ -1,0 +1,24 @@
+{
+	"name": "tooltips",
+	"repo": "darsain/tooltips",
+	"description": "Tooltips for DOM elements.",
+	"version": "0.1.0",
+	"keywords": [
+		"tooltip",
+		"tip",
+		"ui"
+	],
+	"dependencies": {
+		"darsain/tooltip": "*",
+		"darsain/event": "*",
+		"component/indexof": "*",
+		"code42day/dataset": "*"
+	},
+	"development": {
+		"components/jquery": "1.10.2"
+	},
+	"scripts": [
+		"index.js"
+	],
+	"license": "MIT"
+}

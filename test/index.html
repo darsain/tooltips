@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>Tooltips test</title>
+		<link rel="stylesheet" href="../build/build.css">
+		<link rel="stylesheet" href="test.css">
+	</head>
+	<body>
+
+		<div class="examples">
+			<ul class="targets">
+				<li class="target movable" data-tip="Move the element toward window endges to test the automatic positioning." data-tip-place="top-left">top-left</li>
+				<li class="target movable" data-tip="Move the element toward window endges to test the automatic positioning." data-tip-place="top">top</li>
+				<li class="target movable" data-tip="Move the element toward window endges to test the automatic positioning." data-tip-place="top-right">top-right</li>
+			</ul>
+			<ul class="targets vertical left">
+				<li class="target movable" data-tip="Move the element toward window endges to test the automatic positioning." data-tip-place="left-top">left-top</li>
+				<li class="target movable" data-tip="Move the element toward window endges to test the automatic positioning." data-tip-place="left">left</li>
+				<li class="target movable" data-tip="Move the element toward window endges to test the automatic positioning." data-tip-place="left-bottom">left-bottom</li>
+			</ul>
+			<ul class="targets vertical right">
+				<li class="target movable" data-tip="Move the element toward window endges to test the automatic positioning." data-tip-place="right-top">right-top</li>
+				<li class="target movable" data-tip="Move the element toward window endges to test the automatic positioning." data-tip-place="right">right</li>
+				<li class="target movable" data-tip="Move the element toward window endges to test the automatic positioning." data-tip-place="right-bottom">right-bottom</li>
+			</ul>
+			<div class="dynamic" id="dynamic">
+				<button data-action="add">add</button>
+				<button data-action="remove">remove</button>
+				<ul class="targets"></ul>
+			</div>
+			<ul class="targets clear">
+				<li class="target movable" data-tip="Move the element toward window endges to test the automatic positioning." data-tip-place="bottom-left">bottom-left</li>
+				<li class="target movable" data-tip="Move the element toward window endges to test the automatic positioning." data-tip-place="bottom">bottom</li>
+				<li class="target movable" data-tip="Move the element toward window endges to test the automatic positioning." data-tip-place="bottom-right">bottom-right</li>
+			</ul>
+		</div>
+
+		<div class="examples">
+			<ul class="targets">
+				<li class="target" data-tip="Managing tip types and extra classes is super easy." data-tip-type="light">light</li>
+				<li class="target" data-tip="Managing tip types and extra classes is super easy." data-tip-type="success">success</li>
+				<li class="target" data-tip="Managing tip types and extra classes is super easy." data-tip-type="warning">warning</li>
+				<li class="target" data-tip="Managing tip types and extra classes is super easy." data-tip-type="error">error</li>
+			</ul>
+		</div>
+
+		<div class="examples">
+			<ul class="targets">
+				<li class="target" data-tip="Managing tip types and extra classes is super easy." data-tip-effect="none"><em>none</em></li>
+				<li class="target" data-tip="Managing tip types and extra classes is super easy." data-tip-effect="fade">fade</li>
+				<li class="target" data-tip="Managing tip types and extra classes is super easy." data-tip-effect="slide">slide</li>
+				<li class="target" data-tip="Managing tip types and extra classes is super easy." data-tip-effect="grow">grow</li>
+			</ul>
+		</div>
+
+		<div class="examples">
+			<input type="text" placeholder="Focus me!" class="focusable" data-ftip="Focused!">
+		</div>
+
+		<script src="../build/build.js"></script>
+		<script src="test.js"></script>
+	</body>
+</html>
