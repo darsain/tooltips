@@ -2,7 +2,12 @@
 	"name": "tooltips",
 	"description": "Tooltips for DOM elements.",
 	"version": "0.1.0",
-	"date": "",
+	"date": "2013-12-20 18:23:43 +00:00",
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/darsain/tooltip.git",
+		"homepage": "https://github.com/darsain/tooltip"
+	},
 	"licenses": [
 		{
 			"type": "MIT",
