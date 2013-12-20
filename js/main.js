@@ -28,7 +28,7 @@ window.hints = new Tooltips($example[0], {
 
 // Movable
 $('.target.movable').each(function (i, target) {
-	var tip = tips.getTip(target);
+	var tip = tips.get(target);
 
 	// Dragging
 	var dragger = new DragAndReset(target);
