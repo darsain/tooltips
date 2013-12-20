@@ -34,7 +34,7 @@ var tips = window.tips = new Tooltips(document, {
 // Movable test
 (function () {
 	$('.target.movable').each(function (i, target) {
-		var tip = tips.getTip(target);
+		var tip = tips.get(target);
 
 		// Dragging
 		var dragger = new DragAndReset(target);
