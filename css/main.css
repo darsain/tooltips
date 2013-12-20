@@ -1,0 +1,92 @@
+/* Header style */
+header.projecttitle { margin: 0 auto; padding: 115px 0 100px; color: #fff; text-shadow: 1px 1px 0 rgba(0,0,0,.3); background-color: #545260; }
+header .projectname { text-shadow: 2px 2px 0 rgba(0,0,0,.3); }
+.download { margin-top: -45px; }
+
+/* Color theme */
+a,
+ul.grid li a,
+.download a:hover,
+.repos ul li a:hover { color: #d99241; }
+
+.chromeframe,
+.download a,
+ul.grid li a:hover,
+.mainnav ul li.active a,
+.license:hover { background: #e89c46; }
+
+.license:hover:before,
+.mainnav ul li.active a:before { border-right-color: #e89c46; }
+.download a.repo:before,
+.license:hover:after { border-left-color: #e89c46; }
+
+/* Dark bg */
+.download h2,
+.download h3,
+.license { background: #38393d; }
+
+.download h2:before,
+.license:before { border-right-color: #38393d; }
+.download h2:after,
+.license:after { border-left-color: #38393d; }
+
+/* Example */
+.example { width: 600px; margin: 80px auto 40px; text-align: center; }
+.example h4 { padding: .8em 0 0; font-family: Georgia, serif; font-weight: normal; font-style: italic; }
+
+.example .target {
+	position: relative;
+	width: 120px;
+	line-height: 50px;
+	margin: 10px 5px;
+	font-family: monospace;
+	text-align: center;
+	text-shadow: 1px 1px rgba(0,0,0,.2);
+	border: 1px solid rgba(255,255,255,.3);
+	border-radius: 3px;
+	background: inherit;
+}
+.example .target.movable { cursor: move; border-style: dashed; }
+.example .target.movable,
+.example .target.movable:after { border-style: dashed; }
+
+/* Square of tooltips */
+.example .targets {
+	list-style: none;
+	margin: 0 auto;
+	padding: 0;
+	word-spacing: -0.3em;
+	text-align: center;
+}
+.example .targets .target { display: inline-block; }
+.example .targets.vertical .target { display: block; }
+.example .targets.vertical.left { float: left; }
+.example .targets.vertical.right { float: right; }
+.example .targets.clear { clear: both; }
+
+.example .dynamic {
+	margin: 10px 120px 0;
+	text-align: center;
+}
+
+.example .dynamic button {
+	width: 80px;
+	padding: 10px 0;
+	color: #222;
+	background: #aaa;
+	border: 0;
+	border-radius: 2px;
+}
+.example .dynamic button:hover { background: #fff; }
+.example .dynamic button:active { color: #fff; background: #444; }
+
+.example .focusable,
+.example .focusable:focus {
+	width: 100px;
+	color: #fff;
+	background: #333;
+	border: 0;
+	border-top: 1px solid #222;
+	border-radius: 2px;
+	background-clip: padding-box;
+}

@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie10 lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie10 lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie10 lt-ie9"> <![endif]-->
+<!--[if IE 9]>         <html class="no-js lt-ie10"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+	<title>Tooltips</title>
+	<meta name="description" content="Tooltips for DOM elements.">
+	<meta name="viewport" content="width=device-width">
+
+	<link rel="stylesheet" href="css/normalize.css">
+	<link rel="stylesheet" href="css/font-awesome.css">
+	<link rel="stylesheet" href="css/ospb.css">
+	<link rel="stylesheet" href="css/main.css">
+	<link rel="stylesheet" href="dist/tooltips.css">
+	<script src="js/vendor/modernizr.js"></script>
+</head>
+<body data-repo="darsain/tooltips" data-metafile="meta.json">
+	<!--[if lt IE 9]>
+		<p class="chromeframe"><i class="icon-warning-sign icon-large"></i> You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> or <a href="http://www.google.com/chromeframe/?redirect=true">activate Google Chrome Frame</a> to improve your experience. <i class="icon-warning-sign icon-large"></i></p>
+	<![endif]-->
+
+	<header class="projecttitle">
+		<div class="titlewrap">
+			<h1 class="projectname">Tooltips</h1>
+			<a href="https://twitter.com/Darsain" class="follow"><i class="icon-twitter icon-large"></i> Follow for updates</a>
+		</div>
+		<p class="projectdescription">Tooltips for DOM elements</p>
+
+		<div class="example" id="example">
+				<ul class="targets">
+					<li class="target movable" data-tip="Move the element toward window endges to test the automatic positioning." data-tip-place="top-left">top-left</li>
+					<li class="target movable" data-tip="Move the element toward window endges to test the automatic positioning." data-tip-place="top">top</li>
+					<li class="target movable" data-tip="Move the element toward window endges to test the automatic positioning." data-tip-place="top-right">top-right</li>
+				</ul>
+				<ul class="targets vertical left">
+					<li class="target movable" data-tip="Move the element toward window endges to test the automatic positioning." data-tip-place="left-top">left-top</li>
+					<li class="target movable" data-tip="Move the element toward window endges to test the automatic positioning." data-tip-place="left">left</li>
+					<li class="target movable" data-tip="Move the element toward window endges to test the automatic positioning." data-tip-place="left-bottom">left-bottom</li>
+				</ul>
+				<ul class="targets vertical right">
+					<li class="target movable" data-tip="Move the element toward window endges to test the automatic positioning." data-tip-place="right-top">right-top</li>
+					<li class="target movable" data-tip="Move the element toward window endges to test the automatic positioning." data-tip-place="right">right</li>
+					<li class="target movable" data-tip="Move the element toward window endges to test the automatic positioning." data-tip-place="right-bottom">right-bottom</li>
+				</ul>
+				<div class="dynamic" id="dynamic">
+					<button data-action="add">add</button>
+					<button data-action="remove">remove</button>
+					<ul class="targets container"></ul>
+				</div>
+				<ul class="targets clear">
+					<li class="target movable" data-tip="Move the element toward window endges to test the automatic positioning." data-tip-place="bottom-left">bottom-left</li>
+					<li class="target movable" data-tip="Move the element toward window endges to test the automatic positioning." data-tip-place="bottom">bottom</li>
+					<li class="target movable" data-tip="Move the element toward window endges to test the automatic positioning." data-tip-place="bottom-right">bottom-right</li>
+				</ul>
+
+			<h4>types</h4>
+			<ul class="targets">
+				<li class="target" data-tip="Defining &lt;strong&gt;types&lt;/strong&gt; is easy!" data-tip-type="light">light</li>
+				<li class="target" data-tip="Defining &lt;strong&gt;types&lt;/strong&gt; is easy!" data-tip-type="success">success</li>
+				<li class="target" data-tip="Defining &lt;strong&gt;types&lt;/strong&gt; is easy!" data-tip-type="warning">warning</li>
+				<li class="target" data-tip="Defining &lt;strong&gt;types&lt;/strong&gt; is easy!" data-tip-type="error">error</li>
+			</ul>
+
+			<h4>effects</h4>
+			<ul class="targets">
+				<li class="target" data-tip="Defining &lt;strong&gt;effects&lt;/strong&gt; is easy!" data-tip-effect="none"><em>none</em></li>
+				<li class="target" data-tip="Defining &lt;strong&gt;effects&lt;/strong&gt; is easy!" data-tip-effect="fade">fade</li>
+				<li class="target" data-tip="Defining &lt;strong&gt;effects&lt;/strong&gt; is easy!" data-tip-effect="slide">slide</li>
+				<li class="target" data-tip="Defining &lt;strong&gt;effects&lt;/strong&gt; is easy!" data-tip-effect="grow">grow</li>
+			</ul>
+
+			<h4>custom event triggers</h4>
+			<input type="text" placeholder="Focus me!" class="focusable" data-hint="Focused!" data-hint-place="right">
+		</div>
+	</header>
+
+	<div class="pagespan download archive" id="download" data-point="download" data-title="Download" data-active-when="down">
+		<h2>Download <small>latest stable</small></h2>
+		<h3 id="version"><span class="loading">loading <i class="icon-refresh icon-large icon-spin"></i></span></h3>
+
+		<a href="http://darsain.github.io/tooltips/dist/tooltips.zip" data-tooltip="2.8KB gzipped" data-style="light">
+			<span class="title">Standalone build</span> <span class="size">13.6 KB</span>
+		</a>
+		<a href="https://github.com/darsain/tooltips" class="repo" id="repo">
+			<i class="icon-github"></i>
+			<span class="title">Repository</span>
+			<span class="loading"><i class="icon-refresh icon-large icon-spin"></i> loading</span>
+		</a>
+	</div>
+	<div class="pagespan download-border"></div>
+
+	<div id="content" class="content pagespan">
+
+		<nav id="mainnav" class="mainnav">
+			<div id="carbonads-container">
+				<div class="carbonad">
+					<div id="azcarbon"></div>
+					<script type="text/javascript">
+						var z = document.createElement("script");
+						z.type = "text/javascript";
+						z.async = true;
+						z.src = "http://engine.carbonads.com/z/32315/azcarbon_2_1_0_VERT";
+						var s = document.getElementsByTagName("script")[0];
+						s.parentNode.insertBefore(z, s);
+					</script>
+				</div>
+			</div>
+		</nav>
+
+		<section data-point="introduction" data-title="Introduction">
+			<h2>Introduction</h2>
+
+			<p>Tooltips is a wrapper for <a href="http://darsain.github.io/tooltip">darsain/tooltip</a> library
+				that provides simple bindings for DOM elements with <code>data-{key}</code> attributes.</p>
+
+			<p>Tooltips can use mutation observers to handle dynamic elements, but also provides a fallback methods
+				when you need to support older browsers.</p>
+
+			<p>It works by attaching events defined in <code>showOn</code> &amp; <code>hideOn</code> options to each
+				element with <code>data-{key}</code> attribute. This is way better for performance than attaching these
+				events to <code>container</code> and handling them for all elements on a page. Especially in case of
+				events like <code>mouseenter</code> &amp; <code>mouseleave</code>, which are the main focus of this
+				library.</p>
+
+			<p>To save memory, <code>Tooltip</code> instances are created only when first <code>showOn</code> event is
+				fired.</p>
+
+			<h3>Compatibility</h3>
+
+			<p>Browser support starts at IE8+, with an exception of automatic binding to dynamic elements via Mutation
+				Observers, which are used only when supported. Mutation Observers have been implemented in all modern
+				browsers and IE11.</p>
+
+			<p>If you want to support browsers without Mutation Observers, you can fall back to <code>.reload()</code>
+				method, or manage dynamic elements as you add &amp; remove them with <code>.add()</code> &amp;
+				<code>.remove()</code> methods.</p>
+
+			<h3><a href="https://github.com/darsain/tooltips/releases">Changelog</a></h3>
+
+			<p>Upholds the <a href="http://semver.org">Semantic Versioning Specification</a>.</p>
+		</section>
+
+		<section data-point="installation" data-title="Installation">
+			<h2>Installation</h2>
+
+			<p>Tooltips is a <a href="https://github.com/component/component">component</a>:</p>
+
+			<pre><code data-language="shell">component install darsain/tooltips</code></pre>
+
+			<p>The standalone build of a latest version is available at:</p>
+
+			<ul>
+				<li><a href="http://darsain.github.io/tooltips/dist/tooltips.zip"><code>tooltips.zip</code></a> - <small>combined archive</small></li>
+				<li><a href="http://darsain.github.io/tooltips/dist/tooltips.js"><code>tooltips.js</code></a> - <small>38 KB <em>sourcemapped</em></small></li>
+				<li><a href="http://darsain.github.io/tooltips/dist/tooltips.min.js"><code>tooltips.min.js</code></a> - <small>14 KB, 2.8KB gzipped</small></li>
+				<li><a href="http://darsain.github.io/tooltips/dist/tooltips.css"><code>tooltips.css</code></a> - <small>4.5 KB, including types &amp; transitions</small></li>
+			</ul>
+
+			<p>When isolating issues on jsfiddle, use the <a href="http://darsain.github.io/tooltips/dist/tooltips.js"><code>tooltips.js</code></a> URL above.</p>
+		</section>
+
+		<section data-point="usage" data-title="Usage examples">
+			<h2>Usage examples</h2>
+
+			<p>When using component:</p>
+
+			<pre><code data-language="javascript">var Tooltips = require('tooltips');</code></pre>
+
+			<p>Create a <code>Tooltips</code> instance using <code>document</code> as a container with all default options:</p>
+
+			<pre><code data-language="javascript">var tips = new Tooltips(document, {
+	tooltip:    {},          // Options for individual Tooltip instances.
+	key:       'tooltip',    // Tooltips data attribute key.
+	showOn:    'mouseenter', // Show tooltip event.
+	hideOn:    'mouseleave', // Hide tooltip event.
+	observe:   0             // Enable mutation observer (used only when supported).
+});</code></pre>
+
+			<p><em>You can see available <code>Tooltip</code> options in <a href="https://github.com/darsain/tooltip/wiki/Tooltip#options-1">Tooltip API documentation</a>.</em></p>
+
+			<p>This binds tooltips to elements with <code>data-tooltip</code> attribute residing inside
+				<code>document</code>. Example element:</p>
+
+			<pre><code data-language="html">&lt;div data-tooltip=&quot;This is a tooltip!&quot;&gt;hover to display&lt;/div&gt;</code></pre>
+
+			<p>You can also customize each tooltip options with additional data attributes:</p>
+
+			<pre><code data-language="html">&lt;div data-tooltip=&quot;This is a tooltip!&quot; data-tooltip-place=&quot;right&quot;&gt;shows on right&lt;/div&gt;
+&lt;div data-tooltip=&quot;Something happened!&quot; data-tooltip-type=&quot;error&quot;&gt;oh noes&lt;/div&gt;</code></pre>
+
+			<h3>Dynamic elements</h3>
+
+			<p>When you are dynamically adding/removing elements from DOM and you have a freedom to target only
+				<a href="http://caniuse.com/#feat=mutationobserver">browsers that support Mutation Observer</a>,
+				just enable the <code>observer</code> option and Tooltips will take care of the rest.</p>
+
+			<p>If you need to support older browsers, you have a few options.</p>
+
+			<p>1. Call <code>.reload()</code> method when some change to DOM happens:</p>
+
+			<pre><code data-language="javascript">document.body.appendChild(newElement);
+tips.reload();</code></pre>
+
+			<p>2. Notify Tooltips about added/removed elements with <code>.add()</code> and <code>.remove()</code> methods:</p>
+
+			<pre><code data-language="javascript">document.body.appendChild(newElement);
+tips.add(newElement);
+document.body.removeChild(newElement);
+tips.remove(newElement);</code></pre>
+
+			<p>These methods check whether <code>newElement</code> or any of it's children has <code>data-{key}</code>
+				attributes, and handle the needed changes.</p>
+
+			<p>The second method is way more efficient.</p>
+		</section>
+
+		<section data-point="documentation" data-title="Documentation">
+			<h2>Documentation</h2>
+
+			<p>Documentation is centralized in the <a href="https://github.com/darsain/tooltips/wiki">Tooltips' Repository Wiki</a>,
+				which makes it easy to maintain and keep always up to date.</p>
+
+			<ul class="grid">
+				<li><a href="https://github.com/darsain/tooltips/wiki/Tooltip"><i class="icon-book icon-large"></i> Tooltips API</a></li>
+				<li><a href="https://github.com/darsain/tooltips/wiki/Examples"><i class="icon-book icon-large"></i> Examples</a></li>
+				<li><a href="https://github.com/darsain/tooltip/wiki"><i class="icon-book icon-large"></i> Tooltip API</a></li>
+			</ul>
+		</section>
+	</div>
+
+	<footer class="pagespan" data-point="license" data-title="License">
+		<a id="license" class="license">
+			<i class="icon-refresh icon-spin"></i> Loading license <i class="icon-refresh icon-spin"></i>
+		</a>
+
+		<div id="repos" class="repos" data-display="sly,motio,fpsmeter,tooltip">
+			<i class="icon-refresh icon-large icon-spin"></i>
+			<h6>Loading other projects</h6>
+		</div>
+	</footer>
+
+	<!-- Templates -->
+	<script type="text/tim" class="version">
+		{{version}}  <small>{{date}}</small>
+	</script>
+
+	<script type="text/tim" class="watchers">
+		<span class="size">{{watchers}} <small>watchers</small></span>
+	</script>
+
+	<script type="text/tim" class="license">
+		<span class="fl">{{license}}</span>
+		<span class="fr">{{license}}</span>
+		Lincensed under the <strong>{{license}}</strong> license
+	</script>
+
+	<script type="text/tim" class="repos">
+		<ul class="clearfix">
+			{{items}}
+				<li>
+					<a href="{{url}}">
+						<h4>{{name}}</h4>
+						<span class="watchers"><i class="icon-star"></i> {{watchers}}</span>
+						<p>{{description}}</p>
+					</a>
+				</li>
+			{{/items}}
+		</ul>
+	</script>
+
+	<!-- Scripts -->
+	<script src="//ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
+	<script src="js/vendor/plugins.js"></script>
+	<script src="js/ospb.js"></script>
+	<script src="dist/tooltips.js"></script>
+	<script src="js/main.js"></script>
+
+	<!-- Google Analytics -->
+	<script>
+		var _gaq=[['_setAccount', 'UA-838758-7'],['_trackPageview']];
+		(function(d,t){var g=d.createElement(t),s=d.getElementsByTagName(t)[0];
+		g.src=('https:'==location.protocol?'//ssl':'//www')+'.google-analytics.com/ga.js';
+		s.parentNode.insertBefore(g,s)}(document,'script'));
+	</script>
+</body>
+</html>
