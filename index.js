@@ -117,7 +117,7 @@ function Tooltips(container, options) {
 	 * @return {Tooltips}
 	 */
 	function callTooltipMethod(element, method) {
-		var tip = self.getTip(element);
+		var tip = self.get(element);
 		if (tip) {
 			tip[method]();
 		}
@@ -131,7 +131,7 @@ function Tooltips(container, options) {
 	 *
 	 * @return {Tooltip}
 	 */
-	self.getTip = function (element) {
+	self.get = function (element) {
 		var tip = !!element && (element[TID] || createTip(element));
 		if (tip && !element[TID]) {
 			element[TID] = tip;
