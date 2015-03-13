@@ -45,8 +45,7 @@ When isolating issues on jsfiddle, use the [`tooltips.js`](http://darsain.github
 
 ## Documentation
 
-- **[Tooltips](https://github.com/darsain/tooltips/wiki/Tooltips)** - `Tooltips` API
-- **[Examples](https://github.com/darsain/tooltips/wiki/Examples)** - usage examples
+Can be found in the **[docs](docs)** directory.
 
 ## Contributing
 
