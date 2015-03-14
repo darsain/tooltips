@@ -20,10 +20,6 @@ are used only when supported. Mutation Observers have been implemented in all mo
 If you want to support browsers without Mutation Observers, you can fall back to `.reload()` method, or manage dynamic
 elements as you add & remove them with `.add()` & `.remove()` methods.
 
-### [Changelog](https://github.com/darsain/tooltips/releases)
-
-Upholds the [Semantic Versioning Specification](http://semver.org/).
-
 ## Install
 
 Tooltips is a [component](https://github.com/component/component):
@@ -46,6 +42,8 @@ When isolating issues on jsfiddle, use the [`tooltips.js`](http://darsain.github
 ## Documentation
 
 Can be found in the **[docs](docs)** directory.
+
+[Changelog](CHANGELOG.md).
 
 ## Contributing
 
